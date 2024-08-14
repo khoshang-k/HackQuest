@@ -1,0 +1,133 @@
+*{
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+.container{
+    color: white;
+    height: 200vw;
+    background-color: black;
+    margin: 2;
+}
+
+.problem{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin-bottom: 100px;
+    z-index: 2;
+    background-color: transparent;
+    align-items: center;
+}
+
+.title{
+  color: black;
+    font-size: 60px;
+    align-content: center;
+    z-index: 2;
+    background-color: transparent;
+    margin: 80px;
+    -webkit-animation: glowtext 1s ease-in-out infinite alternate;
+    -moz-animation: glowtext 1s ease-in-out infinite alternate;
+    animation: glowtext 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glowtext {
+  from {
+   text-shadow: 0 0 2px #7bedfe, 0 0 5px #5ad8f7, 0 0 7px #ef6ffb98, 0 0 10px #ef6ffb98, 0 0 12px #ef6ffb98, 0 0 15px #ef6ffb98, 0 0 17px #ef6ffb98;
+  }
+  to {
+    text-shadow: 0 0 5px #5ef2f5, 0 0 7px #ef6ffb98, 0 0 10px #ef6ffb98, 0 0 12px #ef6ffb98, 0 0 15px #ef6ffb98, 0 0 17px #ef6ffb98, 0 0 20px #ef6ffb98;
+  }
+}
+
+  @-webkit-keyframes glow {
+    from {
+     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+    }
+    to {
+      box-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
+    }
+  }
+  
+  .tab-content {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    z-index: 2;
+    width: 50vw;
+    border: 3px solid white;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.184);
+    backdrop-filter: blur(1vmax);
+    padding: 50px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+  }
+
+  .tab-content>h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  .tab-content>ul>li{
+    font-size: 25px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+  }
+  
+  .bold{
+    font-weight: bolder;
+  }
+
+  @keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+    
+}
+
+@keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    
+    50% {
+      scale: 1 1.5;
+    }
+    
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+  #blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgb(252, 12, 12),rgb(245, 11, 147),rgb(181, 24, 243), rgb(116, 17, 247));
+    animation: rotate 15s infinite;
+    opacity: 0.8;
+    z-index: 0;
+  }
+  
+  #blur {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
+    backdrop-filter: blur(10vmax);
+  }z

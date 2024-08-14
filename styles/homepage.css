@@ -1,0 +1,150 @@
+body {
+    background-color: black;
+}
+button{
+    cursor: pointer;
+}
+
+/* section 1 css */
+.section1 {
+    background-image: url("./assets/bg.svg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-rows: 3vh 5fr;
+}
+
+.header1 {
+    padding-top: 2vh;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr 2fr;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.head-but {
+    background: none;
+    border: 0cap;
+    color: aliceblue;
+    font-size: 2.5vh;
+}
+
+.login-but {
+    border-radius: 1.5vh;
+    border-width: 0cap;
+    font-size: 2.5vh;
+    width: 12vw;
+    height: 4.5vh;
+    color: aliceblue;
+    background-image: linear-gradient(to left, #261b7f, #8c3070, #D95F59);
+}
+
+.body1 {
+    display: grid;
+    grid-template-rows: 2fr 4fr 2fr;
+    color: azure;
+}
+
+.det {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.text1 {
+    padding-left: 5vw;
+    padding-right: 1vw;
+}
+
+.timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.space5{
+    min-width: 3vw;
+}
+
+.box1 {
+    text-align: center;
+    border-radius: 1vw;
+    padding: 1vh;
+    min-width: 7vw;
+    background-color: rgb(255, 255, 255, 0.3);
+    font-size: 3vh;
+}
+
+/* section 2 css */
+.section2 {
+    background-color: black;
+    height: 70vh;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+}
+
+.det2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.box2,
+.box3 {
+    color: aliceblue;
+    padding: 1vh;
+    max-width: 25vw;
+    padding-left: 4vw;
+    
+}
+
+.box2 {
+    padding-top: 7vh;
+}
+.text3{
+    border-style: solid;
+    border-width: 3px;
+    padding: 3vh;
+    text-align: center;
+    
+}
+#head{
+    text-shadow: 0 0 2px rgb(255, 255, 255, 0.3), 0 0 4px #fff, 0 0 6px rgb(230, 0, 115,0.3), 0 0 8px rgb(230, 0, 115,0.6), 0 0 10px rgb(230, 0, 115,0.9), 0 0 12px rgb(230, 0, 115);
+}
+#text-but{
+    background: none;
+    border: 0cap;
+    color: aliceblue;   
+    background-image: linear-gradient(to left, #8c3070, #D95F59);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.section3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.text4{
+    color: aliceblue;
+    text-align: center ;
+    padding-left: 5vw;
+    padding-right: 1vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#text-head{
+    font-size: 5vh;
+}
+.text-event{
+    font-size: 3vh;
+}
+.image2{
+    margin-left: auto;
+    margin-right: auto;
+}
+/* CSS for section 4 */
+.heading4{
+    text-align: center;
+    font-size: 6vh;
+    color: aliceblue;
+}
