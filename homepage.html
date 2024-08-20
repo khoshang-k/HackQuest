@@ -5,17 +5,19 @@
     <meta content="width=device-width; initial-scale=1.0;" name="viewport" />
     <link rel="stylesheet" href="./styles/homepage.css" />
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
-    <title>HackQuest</title> <!--title of the page-->
-    <link rel="icon" href="#" type="image/svg" /> <!--logo beside title name-->
+    <title>HackQuest</title>
+    <link rel="icon" href="#" type="image/svg" />
 </head>
 
-<body width="device-width"> <!--to change width according to device width-->
+<body width="device-width">
     <main>
+        <div id="blob" data-blob></div>
+        <div id="blur"></div>
         <!-- section 1 HTML -->
         <div class="section1">
             <div class="header1">
                 <div class="logo">
-                    <img id="logo-image" src="#" alt="HackQuest" title="EcoTracker: Transform your carbon impact">
+                    <a href="#"><img id="logo-image" src="/styles/assets/logo.png" alt="HackQuest"></a>
                 </div>
                 <div class="about-div">
                     <a href="About Us/About Us/index.html">
@@ -27,18 +29,18 @@
                         <button class="head-but">Rules</button>
                     </a>
                 </div>
-                <div class="event-div">
-                    <a href="Problem/Problem/index.html">
-                        <button class="head-but">Events</button>
+                <div class="timeline-div">
+                    <a href="Timeline/index.html">
+                        <button class="head-but">Timeline</button>
                     </a>
                 </div>
-                <div class="faq-div">
-                    <a href="#">
-                        <button class="head-but">FAQs</button>
+                <div class="problem-div">
+                    <a href="Problem/Problem/index.html">
+                        <button class="head-but">Problems</button>
                     </a>
                 </div>
                 <div class="login-div">
-                    <a href="#">
+                    <a href="signup/signup/index.html">
                         <button class="login-but">Sign Up / Log In</button>
                     </a>
                 </div>
@@ -47,7 +49,7 @@
                 <div class="space1"></div>
                 <div class="det">
                     <div class="text1">
-                        <h1>Unlock the power of AI with cutting edge coding education</h1>
+                        <h1>Creating Smarter Machines, One Hack at a Time</h1>
                         <p>Welcome to HackQuest, show your amazing ideas and stand a chance to win some amazing goodies.
                             Join us for an unforgettable experience where creativity meets technology! Whether you're a
                             seasoned coder,
@@ -57,42 +59,24 @@
                     <div class="space3"></div>
                 </div>
                 <div class="space2">
-                    <div class="timer">
-                        <div class="box1">
-                            <p id="day"></p>
-                            <p id="text2">Days</p>
-                        </div>
-                        <div class="space5"></div>
-                        <div class="box1">
-                            <p id="hour"></p>
-                            <p id="text2">Hours</p>
-                        </div>
-                        <div class="space5"></div>
-                        <div class="box1">
-                            <p id="min"></p>
-                            <p id="text2">Minutes</p>
-                        </div>
-                        <div class="space5"></div>
-                        <div class="box1">
-                            <p id="sec"></p>
-                            <p id="text2">Seconds</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
         <!-- section 2 HTML -->
         <div class="section2">
-            <div class="space4"></div>
+            <div class="heading2">
+                <h1>Topics</h1>
+            </div>
             <div class="det2">
                 <div class="box2">
                     <div class="text3">
-                        <h2 id="head">Machine learning Algorithms</h2>
-                        <p>Create a section dedicated to exploring different machine learning
-                            algorithms. Explain how they work, provide code examples, and offer interactive
-                            excercises for users to implement and experiment with these algorithms.
+                        <h2 id="head">Mixed Reality</h2>
+                        <p>Create a VR training simulation for a specific industry (e.g., healthcare, manufacturing, or
+                            aviation) that allows users to practice skills in a realistic virtual environment or Build
+                            an AR application that enhances learning by bringing textbooks, diagrams, or historical
+                            artifacts to life through interactive 3D models and animations.
                         </p>
-                        <a href="#">
+                        <a href="Problem/Problem/index.html">
                             <button id="text-but">Learn More >></button>
                         </a>
 
@@ -100,27 +84,40 @@
                 </div>
                 <div class="box3">
                     <div class="text3">
-                        <h2 id="head">Introduction to AI</h2>
+                        <h2 id="head">AI/ML</h2>
                         <p>
-                            Provide a comprehensive Introduction to Artificial Intelligence,
-                            explaining its fundamental concepts, applications, and its impact on various industries.
-                            Include interactive lessons and visualizations to make the content accessible and engaging.
+                            Create a model to help healthcare institutions to monitor patient records and provide
+                            suggestions or build a model to analyze data after natural disasters to provide real time
+                            insights. Else build a model to help finincial institutions detect fraudulent transanctions.
                         </p>
-                        <a href="#">
+                        <a href="Problem/Problem/index.html">
+                            <button id="text-but">Learn More >></button>
+                        </a>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="text3">
+                        <h2 id="head">Blockchain</h2>
+                        <p>
+                            Create a blockchain solution that enables real-time tracking and verification of goods
+                            throughout the supply chain. or design a blockchain-based voting system that ensures
+                            transparency, security, and verifiability while maintaining voter anonymity. Else create a
+                            blockchain-based platform for trading carbon credits that ensures the authenticity and
+                            traceability of credits.
+                        </p>
+                        <a href="Problem/Problem/index.html">
                             <button id="text-but">Learn More >></button>
                         </a>
                     </div>
                 </div>
                 <div class="box2">
                     <div class="text3">
-                        <h2 id="head">Programming Language for AI</h2>
+                        <h2 id="head">IoT</h2>
                         <p>
-                            Offer in-depth tutorials and resources on programming languages commonly used in AI
-                            development, such as Python, R, and Java. Cover topics like data manipulation, statistical
-                            analysis,
-                            and machine learning libraries specific to each language.
+                            Develop an IoT based device to monitor usage of fertilizers and other agriculture resources.
+                            Else create an application for homeowners to track their carbon footprint.
                         </p>
-                        <a href="#">
+                        <a href="Problem/Problem/index.html">
                             <button id="text-but">Learn More >></button>
                         </a>
                     </div>
@@ -132,7 +129,8 @@
         <div class="section3">
             <div class="text4">
                 <h2 id="text-head">What is HackQuest and Why join Us?</h2>
-                <p class="text-event">HackQuest is 24 hour long running hackathon will be held on August 24th & 25th , We call for
+                <p class="text-event">HackQuest is 24 hour long running hackathon will be held on August 24th & 25th ,
+                    We call for
                     hackers, artists, coders, designers, tech evangelists, creatives, and developers from all
                     disciplines to take a part to win awesome prizes and collaborate with other developers . Throughout
                     the weekend hackers at HackQuest will have unique opportunities to learn from each other trying
@@ -144,11 +142,133 @@
             </div>
         </div>
         <!-- section 4 HTML -->
-         <div class="section4">
+        <div class="section4">
             <div class="heading4">
                 <h1>Sponsors & Partners</h1>
+                <div class="sponsorus">
+                    <p class="mail">Interested in Sponsoring</p>
+                    <a class="mail" href="mailto:khoshangkashyap123@gmail.com">
+                        <button id="sponsor"> Sponsor Us</button>
+                    </a>
+                </div>
+
             </div>
-         </div>
+            <span class="slider" id="slider1"></span>
+            <span class="slider" id="slider2"></span>
+            <span class="slider" id="slider3"></span>
+            <span class="slider" id="slider4"></span>
+            <span class="slider" id="slider5"></span>
+            <span class="slider" id="slider6"></span>
+            <span class="slider" id="slider7"></span>
+
+            <div class="imgContainer" style="--t:20s">
+
+                <div class="slide_div" id="slide_1">
+                    <img src="./styles/assets/spon1.png" alt="" class="img" id="img1">
+                </div>
+                <div class="slide_div" id="slide_2">
+                    <img src="./styles/assets/spon2.png" alt="" class="img" id="img2">
+                </div>
+                <div class="slide_div" id="slide_3">
+                    <img src="./styles/assets/spon3.png" alt="" class="img" id="img3">
+                </div>
+                <div class="slide_div" id="slide_4">
+                    <img src="./styles/assets/spon4.png" alt="" class="img" id="img4">
+                </div>
+                <div class="slide_div" id="slide_5">
+                    <img src="./styles/assets/spon1.png" alt="" class="img" id="img5">
+                </div>
+                <div class="slide_div" id="slide_6">
+                    <img src="./styles/assets/spon2.png" alt="" class="img" id="img6">
+                </div>
+                <div class="slide_div" id="slide_7">
+                    <img src="./styles/assets/spon3.png" alt="" class="img" id="img7">
+                </div>
+
+            </div>
+        </div>
+        <!-- section 5 HTML -->
+        <div class="section5">
+            <div class="heading2">
+                <h2>HackQuest Kickoff</h2>
+            </div>
+            <div class="timer">
+                <div class="box1">
+                    <p id="day"></p>
+                    <p id="text2">Days</p>
+                </div>
+                <div class="box1"><h5>:</h5></div>
+                <div class="box1">
+                    <p id="hour"></p>
+                    <p id="text2">Hours</p>
+                </div>
+                <div class="box1"><h5>:</h5></div>
+                <div class="box1">
+                    <p id="min"></p>
+                    <p id="text2">Minutes</p>
+                </div>
+                <div class="box1"><h5>:</h5></div>
+                <div class="box1">
+                    <p id="sec"></p>
+                    <p id="text2">Seconds</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="content">
+              <div class="social-media">
+                <h4>Social</h4>
+                <p>
+                  <a href="#"
+                    ><i class="fab fa-linkedin"></i> Linkedin</a
+                  >
+                </p>
+                <p>
+                  <a href="#"
+                    ><i class="fab fa-twitter"></i> Twitter</a
+                  >
+                </p>
+                <p>
+                  <a href="https://github.com/farazc60"
+                    ><i class="fab fa-github"></i> Github</a
+                  >
+                </p>
+                <p>
+                  <a href="https://www.facebook.com/codewithfaraz"
+                    ><i class="fab fa-facebook"></i> Facebook</a
+                  >
+                </p>
+                <p>
+                  <a href="https://www.instagram.com/codewithfaraz"
+                    ><i class="fab fa-instagram"></i> Instagram</a
+                  >
+                </p>
+              </div>
+              <div class="links">
+                <h4>Quick links</h4>
+                <p><a href="#">Home</a></p>
+                <p><a href="/About Us/About Us/index.html">About</a></p>
+                <p><a href="/Rules/Rules/index.html">Rules</a></p>
+                <p><a href="/Timeline/index.html">Timeline</a></p>
+                <p><a href="/Problem/Problem/index.html">Problems</a></p>
+              </div>
+              <div class="details">
+                <h4 class="address">Address</h4>
+                <p>
+                  ABV-IIITM Gwalior <br />
+                  Pincode - 474015
+                </p>
+                <h4 class="mobile">Mobile</h4>
+                <p><a href="#">+91 6457472454</a></p>
+                <h4 class="mail">Email</h4>
+                <p><a href="#">hackquest@gmail.com</a></p>
+              </div>
+            </div>
+            <footer>
+              <hr />
+              © 2024 HackQuest
+            </footer>
+          </div>
     </main>
     <script src="./scripts/homepage.js"></script>
 </body>

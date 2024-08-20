@@ -1,0 +1,370 @@
+*
+            {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    
+    50% {
+      scale: 1 1.5;
+    }
+    
+    to {
+      rotate: 360deg;
+    }
+  }
+@-webkit-keyframes glow {
+    from {
+     text-shadow: 0 0 2px #7bedfe, 0 0 5px #5ad8f7, 0 0 7px #ef6ffb98, 0 0 10px #ef6ffb98, 0 0 12px #ef6ffb98, 0 0 15px #ef6ffb98, 0 0 17px #ef6ffb98;
+    }
+    to {
+      text-shadow: 0 0 5px #5ef2f5, 0 0 7px #ef6ffb98, 0 0 10px #ef6ffb98, 0 0 12px #ef6ffb98, 0 0 15px #ef6ffb98, 0 0 17px #ef6ffb98, 0 0 20px #ef6ffb98;
+    }
+  }
+  .head{
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    margin-top: 10vh;
+    font-size: 10vh;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+#blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgb(252, 12, 12),rgb(245, 11, 147),rgb(181, 24, 243), rgb(116, 17, 247));
+    animation: rotate 15s infinite;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  
+  #blur {
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    backdrop-filter: blur(10vmax);
+  }
+body
+{
+    background-color: #000000;
+}
+.timeline
+{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+.container
+{
+    padding: 10px 50px;
+    position:relative;
+    width: 50%;
+    animation: movedown .5s linear forwards;
+    opacity: 0;
+}
+@keyframes movedown {
+    0%
+    {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.container:nth-child(2)
+{
+    animation-delay: 0.5s;
+}
+.container:nth-child(3)
+{
+    animation-delay: 1s;
+}
+.container:nth-child(4)
+{
+    animation-delay: 1.5s;
+}
+.container:nth-child(5)
+{
+    animation-delay: 2s;
+}
+.container:nth-child(6)
+{
+    animation-delay: 2.5s;
+}
+.container:nth-child(7)
+{
+    animation-delay: 3s;
+}
+.container:nth-child(8)
+{
+    animation-delay: 3.5s;
+}
+.container:nth-child(9)
+{
+    animation-delay: 4s;
+}
+.textbox
+{
+    padding: 20px 30px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 12px;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.184);
+    backdrop-filter: blur(1vmax);
+    border: 2px solid white;
+}
+h2{ 
+    padding-bottom: 20px;
+    color: #fff;
+    font-size: 4vh;
+}
+p{
+    color: #fff;
+    font-size: 2.5vh;
+}
+.left-container
+{
+    left: 0;
+}
+.right-container
+{
+    left: 50%;
+}
+.timeline::after
+{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 4s linear forwards;  
+}
+@keyframes moveline {
+    0%
+    {
+        height: 0;
+    }
+    100%
+    {
+        height: 100%;
+    }
+}
+.textbox h2
+{
+    font-weight: 600;
+}
+.textbox small
+{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.left-container-arrow
+{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+.right-container-arrow
+{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+        /*responsive */
+@media screen and (max-width:600px) {
+    
+    .timeline
+    {
+        margin: 50px auto;
+    }
+    .timeline::after
+    {
+        left: 31px;
+    }
+    .container
+    {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 40px;
+        margin:10px
+    }
+    .textbox
+    {
+        font-size: 13px;
+    }
+    .textbox small
+    {
+        margin-bottom: 10px;
+    }
+    .right-container
+    {
+        left: 0;
+    }
+    .left-container img , .right-container img
+    {
+        left: 10px;
+    }
+    .left-container-arrow , .right-container-arrow
+    {
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px ;     
+           
+
+}
+}
+
+.header1 {
+    position: fixed;
+    width: 100%;
+    padding-top: 1.5vh;
+    padding-bottom: 3vh;
+    top: 0;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr 2fr;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    height: 70px;
+    z-index: 10;
+}
+
+
+.head-but {
+    background: none;
+    border: 0cap;
+    color: aliceblue;
+    font-size: 2.5vh;
+}
+
+.login-but {
+    border-radius: 1.5vh;
+    border-width: 0cap;
+    font-size: 2.5vh;
+    width: 12vw;
+    height: 4.5vh;
+    color: aliceblue;
+    background-image: linear-gradient(to left, #261b7f, #8c3070, #D95F59);
+}
+
+.logo{
+    margin-left: 10px;
+}
+
+#logo-image{
+    height: 50px;
+    width: 200px;
+}
+
+.footer {
+    background-color: black;
+    color: #fefefe;
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    overflow-x: auto;
+  }
+  
+  .footer .heading {
+    color: #fefefe;
+    max-width: 1010px;
+    width: 90%;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  .footer .content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem;
+  }
+  
+  .footer .content p {
+    margin-bottom: 1.3rem;
+  }
+  
+  .footer .content a {
+    text-decoration: none;
+    color: #fefefe;
+  }
+  
+  .footer .content a:hover {
+    border-bottom: 1px solid #971717;
+  }
+  
+  .footer .content h4 {
+    margin-bottom: 1.3rem;
+    font-size: 19px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  footer hr {
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 767px) {
+    .footer .content {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+  
+    .footer {
+      position: unset;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer .content,
+    .footer {
+      font-size: 14px;
+    }
+  }
+  
+  @media (orientation: landscape) and (max-height: 500px) {
+    .footer {
+      position: unset;
+    }
+  }
