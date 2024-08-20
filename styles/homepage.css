@@ -1,26 +1,79 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: auto !important;
+    overflow-x: hidden !important;
+}
+
 body {
     background-color: black;
 }
-button{
+
+button {
     cursor: pointer;
+}
+
+#blob {
+    background-color: white;
+    height: 24vmax;
+    aspect-ratio: 1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgb(252, 12, 12), rgb(245, 11, 147), rgb(181, 24, 243), rgb(116, 17, 247));
+    animation: rotate 15s infinite;
+    opacity: 0.8;
+    z-index: -25;
+}
+
+#blur {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -24;
+    backdrop-filter: blur(10vmax);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 /* section 1 css */
 .section1 {
     background-image: url("./assets/bg.svg");
     height: 100vh;
-    background-size: cover;
+    background-size: 160vw;
+    background-position: -50vw -30px;
     background-repeat: no-repeat;
     display: grid;
-    grid-template-rows: 3vh 5fr;
+    grid-template-rows: 3vh 5fr; 
 }
 
 .header1 {
-    padding-top: 2vh;
+    position: fixed;
+    width: 100%;
+    padding-top: 1.5vh;
+    padding-bottom: 3vh;
     display: grid;
     grid-template-columns: 5fr 1fr 1fr 1fr 1fr 2fr;
     align-items: center;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(20px);
+    height: 35px;
+    z-index: 10;
 }
 
 .head-but {
@@ -28,6 +81,15 @@ button{
     border: 0cap;
     color: aliceblue;
     font-size: 2.5vh;
+}
+
+.logo{
+    margin-left: 10px;
+}
+
+#logo-image{
+    height: 50px;
+    width: 200px;
 }
 
 .login-but {
@@ -41,6 +103,7 @@ button{
 }
 
 .body1 {
+    position: absolute;
     display: grid;
     grid-template-rows: 2fr 4fr 2fr;
     color: azure;
@@ -56,30 +119,68 @@ button{
     padding-right: 1vw;
 }
 
+.text1>h1{
+    font-size: 50px;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.text1>p{
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+@-webkit-keyframes glow {
+    from {
+     text-shadow: 0 0 2px #7bedfe, 0 0 5px #5ad8f7, 0 0 7px #ef6ffb98, 0 0 10px #ef6ffb98, 0 0 12px #ef6ffb98, 0 0 15px #ef6ffb98, 0 0 17px #ef6ffb98;
+    }
+    to {
+      text-shadow: 0 0 5px #5ef2f5, 0 0 7px #ef6ffb98, 0 0 10px #ef6ffb98, 0 0 12px #ef6ffb98, 0 0 15px #ef6ffb98, 0 0 17px #ef6ffb98, 0 0 20px #ef6ffb98;
+    }
+  }
+
 .timer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
 }
-.space5{
+
+.space5 {
     min-width: 3vw;
 }
 
-.box1 {
-    text-align: center;
-    border-radius: 1vw;
-    padding: 1vh;
-    min-width: 7vw;
-    background-color: rgb(255, 255, 255, 0.3);
-    font-size: 3vh;
-}
 
 /* section 2 css */
 .section2 {
-    background-color: black;
-    height: 70vh;
+    height: 90vh;
     display: grid;
     grid-template-rows: 1fr 5fr 1fr;
+}
+
+.heading2 {
+    text-align: center;
+    font-size: 6vh;
+    color: aliceblue;
+    margin: 100px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.heading2>h1{
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.heading2>h2{
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 .det2 {
@@ -93,58 +194,345 @@ button{
 .box3 {
     color: aliceblue;
     padding: 1vh;
-    max-width: 25vw;
+    min-width: 15vw;
     padding-left: 4vw;
-    
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
 }
+
 
 .box2 {
     padding-top: 7vh;
+    min-width: 15vw;
+    margin-right: 30px;
 }
-.text3{
+
+.text3 {
     border-style: solid;
     border-width: 3px;
+    border-radius: 20px;
     padding: 3vh;
     text-align: center;
-    
+    background-color: rgba(255, 255, 255, 0.231);
+
 }
-#head{
-    text-shadow: 0 0 2px rgb(255, 255, 255, 0.3), 0 0 4px #fff, 0 0 6px rgb(230, 0, 115,0.3), 0 0 8px rgb(230, 0, 115,0.6), 0 0 10px rgb(230, 0, 115,0.9), 0 0 12px rgb(230, 0, 115);
+
+#head {
+    text-shadow: 0 0 2px rgb(255, 255, 255, 0.3), 0 0 4px #fff, 0 0 6px rgb(230, 0, 115, 0.3), 0 0 8px rgb(230, 0, 115, 0.6), 0 0 10px rgb(230, 0, 115, 0.9), 0 0 12px rgb(230, 0, 115);
 }
-#text-but{
+
+#text-but {
     background: none;
     border: 0cap;
-    color: aliceblue;   
+    color: aliceblue;
     background-image: linear-gradient(to left, #8c3070, #D95F59);
     background-clip: content-box;
     -webkit-background-clip: text;
     color: transparent;
 }
-.section3{
+/* section 3 css */
+.section3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.text4{
+
+.text4 {
     color: aliceblue;
-    text-align: center ;
+    text-align: center;
     padding-left: 5vw;
     padding-right: 1vw;
     margin-top: auto;
     margin-bottom: auto;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
 }
-#text-head{
+
+#text-head {
     font-size: 5vh;
+    margin-bottom: 40px;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
-.text-event{
+
+.text-event {
     font-size: 3vh;
 }
-.image2{
+
+.image2 {
     margin-left: auto;
     margin-right: auto;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
 }
+
 /* CSS for section 4 */
-.heading4{
+.section4 {
+    height: fit-content;
+}
+
+.heading4 {
     text-align: center;
     font-size: 6vh;
     color: aliceblue;
+    display: grid;
+    grid-template-rows: 25vh 8vh;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.heading4>h1{
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.sponsorus {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#sponsor {
+    border-radius: 1.5vh;
+    border-width: 0cap;
+    font-size: 2.5vh;
+    width: 12vw;
+    height: 4.5vh;
+    color: aliceblue;
+    background-image: linear-gradient(to left, #261b7f, #8c3070, #D95F59);
+}
+
+.mail {
+    padding-left: 2vw;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.image {
+    margin-left: 8vw;
+    height: 35vw;
+    width: 70vw;
+    border-radius: 20px 400px 20px 400px;
+    z-index: 2;
+}
+
+.imgContainer {
+    width: calc(500px * 5);
+    height: 250px;
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    margin-bottom: 100px;
+    background-color: transparent;
+}
+
+.imgContainer .slide_div {
+    animation: sidescroll var(--t) linear infinite;
+}
+
+@keyframes sidescroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+.slide_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 10px;
+    padding: 5px;
+    perspective: 100px;
+}
+
+.slide_div>img {
+    position: relative;
+    height: 100px;
+    width: 300px;
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    transition: transform 1s;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+
+}
+
+@keyframes scrollimg {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-500px * 2.5));
+    }
+
+}
+
+
+.slide_div>img:hover {
+    transform: translateZ(20px);
+}
+
+
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+/* section 5 CSS */
+.box1 {
+    text-align: center;
+    border-radius: 1vw;
+    padding: 0vh;
+    min-width: 10vw;
+    background-color: none;
+    font-size: 6vh;
+    color: aliceblue;
+}
+.cnt-text{
+    font-size: 4vh;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media (max-width:1100px) {
+    .section2{
+        height: 200vh;
+    }
+    .det2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    .section3{
+        grid-template-columns: 1fr;
+    }
+    .image2{
+        display: none;
+    }
+    .head-but {
+        font-size: 2vh;
+    }
+    
+    .login-but {
+        font-size: 2vh;
+    }
+    .det {
+        display: grid;
+        grid-template-columns: 4fr 3fr;
+    }
+}
+
+@media (max-width:850px) {
+    html {
+        width: auto !important;
+        overflow-x: hidden !important;
+    }
+
+    #logo-image{
+        height: 30px;
+        width: 100px;
+    }
+
+    .head-but{
+        font-size: 1.2vh;
+    }
+
+    .login-but{
+        font-size: 1vh;
+    }
+
+    .box2, .box3{
+        min-width: 5vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text1>h1{
+        font-size: 30px;
+    }
+
+    .text1>p{
+        font-size: 15px;
+    }
+
+    .section1 {
+    height: 100vh;
+    background-size: 160vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-rows: 3vh 5fr;
+    }
+
+    .heading2>h1{
+        font-size: 50px;
+    }
+
+    .det2{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-event{
+        font-size: 15px;
+    }
+
+    
+  .heading4>h1{
+    margin-top: 40px;
+    font-size: 40px;
+  }
+
+  .heading4{
+    grid-template-rows: 20vh 8vh;
+  }
+
+  .mail{
+    font-size: 20px;
+  }
+
+  #sponsor{
+    font-size: 10px;
+    width: 80px;
+  }
+
+  .heading2>h2{
+    font-size: 50px;
+    margin-left: -30px;
+  }
+
+  .box1 {
+    font-size: 3vh;
+}
+
 }

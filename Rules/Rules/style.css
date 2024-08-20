@@ -2,14 +2,56 @@
     background-color: transparent;
     margin: 0;
     padding: 0;
-    cursor: none;
+}
+
+body{
+    width: auto ;
+    overflow-x: hidden;
 }
 
 .container{
     color: white;
-    height: 200vw;
+    height: 230vw;
     background-color: black;
-    margin: 2;
+}
+
+.header1 {
+  position: fixed;
+    width: 100%;
+    padding-top: 1.5vh;
+    padding-bottom: 3vh;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr 2fr;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    height: 35px;
+    z-index: 10;
+}
+
+.login-but {
+  border-radius: 1.5vh;
+  border-width: 0cap;
+  font-size: 2.5vh;
+  width: 12vw;
+  height: 4.5vh;
+  color: aliceblue;
+  background-image: linear-gradient(to left, #261b7f, #8c3070, #D95F59);
+}
+
+.head-but {
+  background: none;
+  border: 0cap;
+  color: aliceblue;
+  font-size: 2.5vh;
+}
+
+.logo{
+  margin-left: 10px;
+}
+
+#logo-image{
+  height: 50px;
+  width: 200px;
 }
 
 .problem{
@@ -33,7 +75,14 @@
     -moz-animation: glowtext 1s ease-in-out infinite alternate;
     animation: glowtext 1s ease-in-out infinite alternate;
 }
-
+@keyframes glowtext {
+  from {
+   text-shadow: 0 0 2px #7bedfe, 0 0 5px #5ad8f7, 0 0 7px #ef6ffb98, 0 0 10px #ef6ffb98, 0 0 12px #ef6ffb98, 0 0 15px #ef6ffb98, 0 0 17px #ef6ffb98;
+  }
+  to {
+    text-shadow: 0 0 5px #5ef2f5, 0 0 7px #ef6ffb98, 0 0 10px #ef6ffb98, 0 0 12px #ef6ffb98, 0 0 15px #ef6ffb98, 0 0 17px #ef6ffb98, 0 0 20px #ef6ffb98;
+  }
+}
 @-webkit-keyframes glowtext {
   from {
    text-shadow: 0 0 2px #7bedfe, 0 0 5px #5ad8f7, 0 0 7px #ef6ffb98, 0 0 10px #ef6ffb98, 0 0 12px #ef6ffb98, 0 0 15px #ef6ffb98, 0 0 17px #ef6ffb98;
@@ -42,7 +91,14 @@
     text-shadow: 0 0 5px #5ef2f5, 0 0 7px #ef6ffb98, 0 0 10px #ef6ffb98, 0 0 12px #ef6ffb98, 0 0 15px #ef6ffb98, 0 0 17px #ef6ffb98, 0 0 20px #ef6ffb98;
   }
 }
-
+@keyframes glow {
+  from {
+   box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+  }
+  to {
+    box-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
+  }
+}
   @-webkit-keyframes glow {
     from {
      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
@@ -130,4 +186,55 @@
     position: fixed;
     z-index: 0;
     backdrop-filter: blur(10vmax);
-  }z
+  }
+
+
+  @media (max-width:500px){
+    .container{
+      color: white;
+      height: 1400vw;
+      background-color: black;
+      margin: 0 auto;
+    }
+
+    .title{
+        font-size: 40px;
+        margin: 100px;
+        text-align: center;
+    }
+
+    .tab-content {
+      margin-top: 50px;
+      margin-left: 20px;
+      margin-right: 20px;
+      width: 60vw;
+      padding: 50px;
+      
+    }
+
+    .tab-content>h1{
+      font-size: 35px;
+      margin-left: 30px;
+      margin-bottom: 20px;
+    }
+  
+    .tab-content>ul>li{
+      font-size: 20px;
+      padding-left: 30px;
+      padding-bottom: 10px;
+    }
+
+    #logo-image{
+      height: 30px;
+      width: 100px;
+  }
+
+  .head-but{
+      font-size: 1.2vh;
+  }
+
+  .login-but{
+      font-size: 1vh;
+  }
+    
+  }
