@@ -147,7 +147,10 @@ button {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0;
+<<<<<<< HEAD
     margin-bottom:60px ;
+=======
+>>>>>>> 917b829702240b31ffbbd2b05f788001ddeb9f81
 }
 
 .space5 {
@@ -536,6 +539,7 @@ button {
     font-size: 3vh;
 }
 
+<<<<<<< HEAD
 }
   
   .footer {
@@ -616,3 +620,6 @@ button {
       position: unset;
     }
   }
+=======
+}
+>>>>>>> 917b829702240b31ffbbd2b05f788001ddeb9f81

@@ -55,6 +55,46 @@ body{
     width: 200px;
 }
 
+.header1 {
+    position: fixed;
+    width: 100%;
+    padding-top: 1.5vh;
+    padding-bottom: 3vh;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr 2fr;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    height: 35px;
+    z-index: 10;
+}
+
+
+.head-but {
+    background: none;
+    border: 0cap;
+    color: aliceblue;
+    font-size: 2.5vh;
+}
+
+.login-but {
+    border-radius: 1.5vh;
+    border-width: 0cap;
+    font-size: 2.5vh;
+    width: 12vw;
+    height: 4.5vh;
+    color: aliceblue;
+    background-image: linear-gradient(to left, #261b7f, #8c3070, #D95F59);
+}
+
+.logo{
+    margin-left: 10px;
+}
+
+#logo-image{
+    height: 50px;
+    width: 200px;
+}
+
 .intro{
     display:flex;
     flex-direction:row;
@@ -757,6 +797,7 @@ body{
 
     }
 
+<<<<<<< HEAD
     .footer {
         background-color: black;
         color: #fefefe;
@@ -835,3 +876,134 @@ body{
           position: unset;
         }
       }
+=======
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+.footer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  max-width: 1280px;
+  width: 95%;
+  background: #10182F;
+  border-radius: 6px;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: absolute;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
+>>>>>>> 917b829702240b31ffbbd2b05f788001ddeb9f81
