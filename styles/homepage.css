@@ -310,11 +310,16 @@ button {
 }
 
 .mail {
+    padding-left: 2vw;
     justify-content: center;
     margin-top: auto;
     margin-bottom: auto;
 }
-
+.eemail {
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 .image {
     margin-left: 8vw;
     height: 35vw;
