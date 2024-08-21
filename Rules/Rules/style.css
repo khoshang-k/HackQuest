@@ -11,7 +11,7 @@ body{
 
 .container{
     color: white;
-    height: 230vw;
+    height: 243vw;
     background-color: black;
 }
 
@@ -65,7 +65,7 @@ body{
 }
 
 .title{
-  color: black;
+  color: rgb(255, 255, 255);
     font-size: 60px;
     align-content: center;
     z-index: 2;
@@ -240,7 +240,7 @@ body{
   }
 
   .footer {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.463);
     color: #fefefe;
     position: relative;
     margin-top: 20px;

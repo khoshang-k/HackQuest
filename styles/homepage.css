@@ -147,10 +147,7 @@ button {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0;
-<<<<<<< HEAD
     margin-bottom:60px ;
-=======
->>>>>>> 917b829702240b31ffbbd2b05f788001ddeb9f81
 }
 
 .space5 {
@@ -313,7 +310,6 @@ button {
 }
 
 .mail {
-    padding-left: 2vw;
     justify-content: center;
     margin-top: auto;
     margin-bottom: auto;
@@ -539,11 +535,10 @@ button {
     font-size: 3vh;
 }
 
-<<<<<<< HEAD
 }
   
   .footer {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.463);
     color: #fefefe;
     position: relative;
     margin-top: 20px;
@@ -620,6 +615,3 @@ button {
       position: unset;
     }
   }
-=======
-}
->>>>>>> 917b829702240b31ffbbd2b05f788001ddeb9f81
